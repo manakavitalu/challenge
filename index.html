@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeluguPadaVinodam Challenge</title>
+    <!-- Open Graph tags for better WhatsApp/Twitter link previews -->
+    <meta property="og:title" content="TeluguPadaVinodam Challenge!" />
+    <meta property="og:description" content="Can you beat my score on this exact crossword puzzle?" />
+    <meta property="og:image" content="https://manakavitalu.github.io/logo.png" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #F8FAFC;
+            color: #1A202C;
+            padding: 50px 20px;
+        }
+        h1 { color: #2563EB; }
+        .loader {
+            border: 5px solid #E2E8F0;
+            border-top: 5px solid #2563EB;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <h1>Opening TeluguPadaVinodam...</h1>
+    <p>If the game doesn't open automatically, you will be redirected to the Play Store.</p>
+    <div class="loader"></div>
+
+    <script>
+        window.onload = function() {
+            // 1. Get the seed from the web URL (e.g., ?seed=12345)
+            const urlParams = new URLSearchParams(window.location.search);
+            const seed = urlParams.get('seed');
+
+            // 2. The Play Store link for your app
+            const playStoreUrl = "market://details?id=com.manakavitalu.TeluguCrossWordsGame";
+            const playStoreWebUrl = "https://play.google.com/store/apps/details?id=com.manakavitalu.TeluguCrossWordsGame";
+
+            // 3. Construct the deep link to force the app to open
+            let appIntentUrl = "intent://challenge";
+            if (seed) {
+                appIntentUrl += "?seed=" + seed;
+            }
+            appIntentUrl += "#Intent;scheme=telugupadavinodam;package=com.manakavitalu.TeluguCrossWordsGame;end";
+
+            // 4. Try to launch the Android app using an Intent string
+            // This is the most reliable way to force Android to open the app or fallback to the Play Store
+            window.location.href = appIntentUrl;
+
+            // 5. Fallback timer just in case the Intent structure fails entirely in some browsers
+            setTimeout(function() {
+                // If they are still here after 1.5 seconds, they don't have the app.
+                // Redirect them to the Play Store web page!
+                window.location.href = playStoreWebUrl;
+            }, 1500);
+        };
+    </script>
+</body>
+</html>
+
