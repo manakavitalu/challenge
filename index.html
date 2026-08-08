@@ -36,9 +36,11 @@
 
     <script>
         window.onload = function() {
-            // 1. Get the seed from the web URL (e.g., ?seed=12345)
+            // 1. Get the seed or code from the web URL
             const urlParams = new URLSearchParams(window.location.search);
             const seed = urlParams.get('seed');
+            const code = urlParams.get('code');
+            const challenger = urlParams.get('challenger');
 
             // 2. The Play Store link for your app
             const playStoreUrl = "market://details?id=com.manakavitalu.TeluguCrossWordsGame";
@@ -46,9 +48,16 @@
 
             // 3. Construct the deep link to force the app to open
             let appIntentUrl = "intent://challenge";
-            if (seed) {
-                appIntentUrl += "?seed=" + seed;
+            let queryParams = [];
+            
+            if (seed) queryParams.push("seed=" + seed);
+            if (code) queryParams.push("code=" + code);
+            if (challenger) queryParams.push("challenger=" + encodeURIComponent(challenger));
+            
+            if (queryParams.length > 0) {
+                appIntentUrl += "?" + queryParams.join("&");
             }
+            
             appIntentUrl += "#Intent;scheme=telugupadavinodam;package=com.manakavitalu.TeluguCrossWordsGame;end";
 
             // 4. Try to launch the Android app using an Intent string
