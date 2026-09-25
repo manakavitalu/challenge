@@ -415,15 +415,16 @@
                     ]);
 
                 if (error) {
-                    console.warn("Table insert note:", error.message);
-                    // Fallback to mailto link if table not yet migrated, but still show success to user
+                    console.error("Table insert error:", error);
+                    showAlert('error', 'Failed to log request in the database: ' + error.message + '. Please ensure the database schema is updated.');
+                    return;
                 }
 
                 showAlert('success', 'Your deletion request has been submitted! Reference ID: ' + refId + '. Your account and game data will be wiped within 24–48 hours.');
                 document.getElementById('deletion-form').reset();
             } catch (err) {
                 console.error("Submission error:", err);
-                showAlert('info', 'Your request has been logged. For immediate confirmation, you may also email contact.jsrapps@gmail.com with your registered email: ' + email);
+                showAlert('error', 'An unexpected error occurred: ' + err.message);
             } finally {
                 btn.disabled = false;
                 btn.textContent = "Submit Account Deletion Request";
