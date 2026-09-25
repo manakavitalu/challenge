@@ -320,21 +320,16 @@
             const refId = "DEL-" + Math.random().toString(36).substring(2, 8).toUpperCase();
 
             try {
-                // Insert into Supabase table
-                const { data, error } = await supabaseClient
-                    .from('account_deletion_requests')
-                    .insert([
-                        {
-                            email: email,
-                            display_name: name || null,
-                            notes: "Submitted via web portal. Reference: " + refId,
-                            status: 'pending'
-                        }
-                    ]);
+                // Call secure RPC instead of direct insert
+                const { error } = await supabaseClient.rpc('submit_deletion_request', {
+                    p_email: email,
+                    p_display_name: name || null,
+                    p_notes: "Submitted via web portal. Reference: " + refId
+                });
 
                 if (error) {
-                    console.error("Table insert error:", error);
-                    showAlert('error', 'Failed to log request in the database: ' + error.message + '. Please ensure the database schema is updated.');
+                    console.error("RPC submission error:", error);
+                    showAlert('error', error.message || 'Failed to submit request.');
                     return;
                 }
 
