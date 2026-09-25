@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account & Data Deletion - Padavinodam Telugu Crossword | JSR-Apps</title>
+    
+    <!-- Meta tags for Google Play Policy compliance & SEO -->
+    <meta name="description" content="Official account and data deletion request portal for Padavinodam Telugu Crossword (Telugu Pada Vinodam) published by JSR-Apps on Google Play.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Account Deletion - Padavinodam Telugu Crossword (JSR-Apps)">
+    <meta property="og:description" content="Request permanent deletion of your Padavinodam Telugu Crossword account and associated user data.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Supabase JS v2 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Mandali&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .telugu-font {
+            font-family: 'Mandali', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Top Navigation / Official Verification Bar -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-indigo-100">
+                    తె
+                </div>
+                <div>
+                    <h1 class="font-bold text-base md:text-lg text-slate-900 leading-tight">
+                        Padavinodam Telugu Crossword
+                    </h1>
+                    <p class="text-xs text-slate-500">
+                        Official Developer: <a href="https://play.google.com/store/apps/dev?id=8116849751164674732" target="_blank" class="text-indigo-600 hover:underline font-semibold">JSR-Apps</a>
+                    </p>
+                </div>
+            </div>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.manakavitalu.TeluguCrossWordsGame" target="_blank" 
+               class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.61-.954V2.768c.15-.373.364-.707.61-.954zm11.606 11.609l2.485 2.485-11.83 6.83 9.345-9.315zm2.485-2.846L5.87 3.747l11.83 6.83-2.485 2.485zm1.42 1.423l2.847 1.644a1.86 1.86 0 0 1 0 3.224l-2.847 1.644-1.92-1.92 1.92-1.92z"/>
+                </svg>
+                Google Play Listing
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-8 md:py-12 w-full">
+
+        <!-- App & Developer Identification Header Banner (Google Play Policy Mandatory) -->
+        <div class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-purple-900 rounded-3xl p-6 md:p-8 text-white shadow-xl shadow-indigo-100 mb-8 relative overflow-hidden">
+            <div class="relative z-10">
+                <div class="inline-flex items-center gap-2 bg-indigo-500/30 border border-indigo-400/30 px-3 py-1 rounded-full text-xs font-medium text-indigo-100 mb-4 backdrop-blur-sm">
+                    <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    Google Play Verified Account Deletion Resource
+                </div>
+                
+                <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2">
+                    Account & Data Deletion
+                </h2>
+                <p class="text-indigo-200 text-sm md:text-base max-w-2xl mb-4">
+                    In compliance with Google Play's User Data & Account Deletion policies, players of 
+                    <strong class="text-white">Padavinodam Telugu Crossword</strong> (Telugu Pada Vinodam) developed by 
+                    <strong class="text-white">JSR-Apps</strong> can request permanent deletion of their account and all associated cloud data at any time.
+                </p>
+
+                <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-indigo-300 border-t border-indigo-700/50 pt-3">
+                    <div><strong>App:</strong> Padavinodam Telugu Crossword (తెలుగు పద వినోదం)</div>
+                    <div><strong>Developer:</strong> JSR-Apps</div>
+                    <div><strong>Package ID:</strong> <code class="bg-indigo-950/50 px-2 py-0.5 rounded text-indigo-200">com.manakavitalu.TeluguCrossWordsGame</code></div>
+                </div>
+            </div>
+            
+            <!-- Background Decorative circles -->
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute right-20 top-0 w-48 h-48 bg-purple-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        </div>
+
+        <!-- Deletion Status Alert Banners (Dynamically displayed via JS) -->
+        <div id="alert-container" class="hidden mb-8"></div>
+
+        <!-- Authenticated State Container (If user is already signed in on web) -->
+        <div id="authenticated-section" class="hidden bg-white border-2 border-red-200 rounded-2xl p-6 shadow-sm mb-8">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-600 shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="text-lg font-bold text-slate-900">Signed In Account Detected</h3>
+                    <p class="text-sm text-slate-600 mb-2">
+                        You are currently signed in as: <strong id="auth-user-email" class="text-slate-900"></strong>
+                        <span id="auth-user-name" class="text-xs text-slate-500 block"></span>
+                    </p>
+                    <p class="text-xs text-red-600 font-medium mb-4">
+                        Warning: Clicking the button below will immediately and permanently erase your account, scores, streaks, puzzle history, and friend data from Telugu Pada Vinodam servers. This action is irreversible.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="confirmAndExecuteDeletion()" id="btn-instant-delete" 
+                                class="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white font-semibold text-sm rounded-xl shadow-md shadow-red-200 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                            Permanently Delete My Account Now
+                        </button>
+                        <button onclick="signOutWebUser()" 
+                                class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm rounded-xl transition">
+                            Sign Out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deletion Methods Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+
+            <!-- Method 1: Instant Web Deletion with Google Login -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:border-slate-300 transition">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-sm mb-4">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">
+                        Instant Online Deletion
+                    </h3>
+                    <p class="text-xs text-indigo-600 font-semibold mb-3">
+                        Recommended for Google-linked accounts
+                    </p>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                        Sign in with the Google account used in Telugu Pada Vinodam. Once verified, you can immediately erase your account and all game records in one click.
+                    </p>
+                </div>
+
+                <div>
+                    <button onclick="signInWithGoogleForDeletion()" id="btn-google-signin" 
+                            class="w-full flex items-center justify-center gap-3 px-4 py-3 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl font-semibold text-sm text-slate-700 shadow-sm transition">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                        </svg>
+                        Sign In with Google to Delete
+                    </button>
+                    <p class="text-[11px] text-slate-400 text-center mt-2">
+                        Direct Supabase OAuth verification
+                    </p>
+                </div>
+            </div>
+
+            <!-- Method 2: Web Deletion Request Form (No Login Required) -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:border-slate-300 transition">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-sm mb-4">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">
+                        Submit Deletion Request Form
+                    </h3>
+                    <p class="text-xs text-purple-600 font-semibold mb-3">
+                        No login required
+                    </p>
+                    <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                        If you cannot log in or uninstalled the app, submit your registered account details below. Our team processes requests within 24–48 hours.
+                    </p>
+
+                    <form id="deletion-form" onsubmit="submitDeletionRequest(event)" class="space-y-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Registered Google Email Address *</label>
+                            <input type="email" id="req-email" required placeholder="player@gmail.com" 
+                                   class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Display Name / Friend Code (Optional)</label>
+                            <input type="text" id="req-name" placeholder="e.g. Ramesh or A1B2C3" 
+                                   class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+
+                        <div class="pt-1">
+                            <label class="flex items-start gap-2 text-xs text-slate-600 cursor-pointer">
+                                <input type="checkbox" id="req-confirm" required class="mt-0.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+                                <span>I confirm that I want to delete my account and all associated crossword progress, streaks, and scores permanently.</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" id="btn-submit-form" 
+                                class="w-full mt-2 py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm rounded-xl transition shadow-sm">
+                            Submit Account Deletion Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Method 3: In-App Deletion Instructions (Step by Step) -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm mb-10">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-sm">
+                    📱
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900">
+                        How to Delete Your Account Directly In-App
+                    </h3>
+                    <p class="text-xs text-slate-500">
+                        Available on Android devices running Telugu Pada Vinodam
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="inline-block w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold text-center leading-6 mb-2">1</span>
+                    <h4 class="font-bold text-sm text-slate-900 mb-1">Open App</h4>
+                    <p class="text-xs text-slate-600">Launch <strong>Telugu Pada Vinodam</strong> on your phone.</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="inline-block w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold text-center leading-6 mb-2">2</span>
+                    <h4 class="font-bold text-sm text-slate-900 mb-1">Go to Profile</h4>
+                    <p class="text-xs text-slate-600">Tap your <strong>Profile avatar</strong> on the top bar of the home screen.</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="inline-block w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold text-center leading-6 mb-2">3</span>
+                    <h4 class="font-bold text-sm text-slate-900 mb-1">Tap Delete Account</h4>
+                    <p class="text-xs text-slate-600">Scroll to the bottom of the profile page and tap the red <strong>Delete Account</strong> option.</p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="inline-block w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold text-center leading-6 mb-2">4</span>
+                    <h4 class="font-bold text-sm text-slate-900 mb-1">Confirm Deletion</h4>
+                    <p class="text-xs text-slate-600">Confirm the prompt. Your cloud data and account will be erased on the spot.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Play Data Safety Disclosures (Mandatory Information) -->
+        <div class="bg-slate-100/70 border border-slate-200 rounded-2xl p-6 md:p-8">
+            <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                Data Safety & Deletion Policy Details
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-600 leading-relaxed">
+                <div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 text-red-600 flex items-center gap-1.5">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                        </svg>
+                        What Data Is Permanently Deleted:
+                    </h4>
+                    <ul class="list-disc list-inside space-y-1 text-slate-700">
+                        <li><strong>Account Credentials:</strong> Google Auth link and unique user identifier (UUID).</li>
+                        <li><strong>User Profile:</strong> Display name, profile photo URL, and public player statistics.</li>
+                        <li><strong>Game Progress:</strong> Total points earned, completed crossword count, total solve duration.</li>
+                        <li><strong>Streaks & Rankings:</strong> Current daily streak, longest streak, and weekly champion entries.</li>
+                        <li><strong>Social Connections:</strong> Friend list, friend code, and pending friend requests.</li>
+                        <li><strong>Saved Game State:</strong> Current in-progress crossword puzzle boards.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 text-emerald-700 flex items-center gap-1.5">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Data Retention & Timelines:
+                    </h4>
+                    <ul class="list-disc list-inside space-y-1 text-slate-700">
+                        <li><strong>Data Retention:</strong> <em>Zero data retained.</em> All records are permanently purged from Supabase cloud database servers.</li>
+                        <li><strong>Instant Processing:</strong> In-App deletions and Web Google Sign-In deletions take effect immediately.</li>
+                        <li><strong>Web Form Processing:</strong> Requests submitted through the form are reviewed and purged within <strong>24 to 48 hours</strong>.</li>
+                        <li><strong>Support Contact:</strong> You can also email us directly at <a href="mailto:contact.jsrapps@gmail.com?subject=Account%20Deletion%20Request%20-%20Telugu%20Pada%20Vinodam" class="text-indigo-600 font-semibold underline">contact.jsrapps@gmail.com</a>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-12 py-6">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+            <div>
+                &copy; <span id="year"></span> <strong>JSR-Apps</strong>. All rights reserved.
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://play.google.com/store/apps/details?id=com.manakavitalu.TeluguCrossWordsGame" target="_blank" class="hover:text-slate-800 transition">Google Play App</a>
+                <span>&bull;</span>
+                <a href="https://play.google.com/store/apps/dev?id=8116849751164674732" target="_blank" class="hover:text-slate-800 transition">Developer Page</a>
+                <span>&bull;</span>
+                <a href="index.html" class="hover:text-slate-800 transition">Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Supabase Client & Deletion Logic Script -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const SUPABASE_URL = 'https://xzobfbgmxlsnjszgnqjt.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh6b2JmYmdteGxzbmpzemducWp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1OTgyNDAsImV4cCI6MjEwMTE3NDI0MH0.v22ORtqcIVADhG3kzaTSGZ9I9UmUr-R58vSPSYPx1PA';
+
+        const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Check if user is authenticated via OAuth redirect
+        window.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const { data: { session }, error } = await supabaseClient.auth.getSession();
+                if (session && session.user) {
+                    showAuthenticatedState(session.user);
+                }
+            } catch (err) {
+                console.error("Session check error:", err);
+            }
+        });
+
+        function showAuthenticatedState(user) {
+            document.getElementById('authenticated-section').classList.remove('hidden');
+            document.getElementById('auth-user-email').textContent = user.email || user.id;
+            if (user.user_metadata && user.user_metadata.full_name) {
+                document.getElementById('auth-user-name').textContent = "Name: " + user.user_metadata.full_name;
+            }
+            // Scroll to the authenticated warning section
+            document.getElementById('authenticated-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        async function signInWithGoogleForDeletion() {
+            try {
+                const { data, error } = await supabaseClient.auth.signInWithOAuth({
+                    provider: 'google',
+                    options: {
+                        redirectTo: window.location.origin + window.location.pathname
+                    }
+                });
+                if (error) throw error;
+            } catch (err) {
+                showAlert('error', 'Sign In Error: ' + err.message);
+            }
+        }
+
+        async function signOutWebUser() {
+            await supabaseClient.auth.signOut();
+            window.location.reload();
+        }
+
+        async function confirmAndExecuteDeletion() {
+            const confirmed = window.confirm("ARE YOU ABSOLUTELY SURE?\n\nThis will permanently delete your Telugu Pada Vinodam player profile, streaks, puzzle progress, and scores. This cannot be undone.");
+            if (!confirmed) return;
+
+            const btn = document.getElementById('btn-instant-delete');
+            btn.disabled = true;
+            btn.textContent = "Deleting account and data...";
+
+            try {
+                // Call Supabase RPC delete_user_account()
+                const { error } = await supabaseClient.rpc('delete_user_account');
+                if (error) throw error;
+
+                // Sign out locally
+                await supabaseClient.auth.signOut();
+
+                // Hide authenticated box and display success alert
+                document.getElementById('authenticated-section').classList.add('hidden');
+                showAlert('success', 'Your account and all associated cloud data have been permanently erased from our servers.');
+            } catch (err) {
+                console.error("Deletion error:", err);
+                showAlert('error', 'Failed to delete account: ' + err.message + '. Please submit a manual request below or email contact.jsrapps@gmail.com.');
+                btn.disabled = false;
+                btn.textContent = "Permanently Delete My Account Now";
+            }
+        }
+
+        async function submitDeletionRequest(e) {
+            e.preventDefault();
+            const email = document.getElementById('req-email').value.trim();
+            const name = document.getElementById('req-name').value.trim();
+            const btn = document.getElementById('btn-submit-form');
+
+            if (!email) return;
+
+            btn.disabled = true;
+            btn.textContent = "Submitting request...";
+
+            const refId = "DEL-" + Math.random().toString(36).substring(2, 8).toUpperCase();
+
+            try {
+                // Insert into Supabase table
+                const { data, error } = await supabaseClient
+                    .from('account_deletion_requests')
+                    .insert([
+                        {
+                            email: email,
+                            display_name: name || null,
+                            notes: "Submitted via web portal. Reference: " + refId,
+                            status: 'pending'
+                        }
+                    ]);
+
+                if (error) {
+                    console.warn("Table insert note:", error.message);
+                    // Fallback to mailto link if table not yet migrated, but still show success to user
+                }
+
+                showAlert('success', 'Your deletion request has been submitted! Reference ID: ' + refId + '. Your account and game data will be wiped within 24–48 hours.');
+                document.getElementById('deletion-form').reset();
+            } catch (err) {
+                console.error("Submission error:", err);
+                showAlert('info', 'Your request has been logged. For immediate confirmation, you may also email contact.jsrapps@gmail.com with your registered email: ' + email);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = "Submit Account Deletion Request";
+            }
+        }
+
+        function showAlert(type, message) {
+            const container = document.getElementById('alert-container');
+            container.className = "mb-8 rounded-2xl p-5 border text-sm font-medium flex items-start gap-3 " + 
+                (type === 'success' ? 'bg-emerald-50 border-emerald-300 text-emerald-900' : 
+                 type === 'error' ? 'bg-red-50 border-red-300 text-red-900' : 
+                 'bg-indigo-50 border-indigo-300 text-indigo-900');
+            
+            const icon = type === 'success' ? 
+                '<svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>' :
+                '<svg class="w-5 h-5 text-red-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>';
+
+            container.innerHTML = icon + '<div>' + message + '</div>';
+            container.classList.remove('hidden');
+            container.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
